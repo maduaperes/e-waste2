@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site de conscientização sobre descarte correto de lixo eletrônico." />
+  <title>EcoTech | Descarte Consciente</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__brand">
+      <img src="imagens/EcotechLogo.png" alt="Logo EcoTech" />
+
+      <div>
+        <h2>EcoTech</h2>
+        <span>Descarte Sustentável</span>
+      </div>
+    </div>
+
+    <button class="navbar__toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="navbar__menu">
+      <a href="#inicio">Início</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#informacoes">Informações</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__background"></div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Transforme lixo eletrônico em <span>impacto positivo</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Ajude o planeta descartando seus equipamentos eletrônicos de forma
+        correta, segura e sustentável.
+      </p>
+
+      <div class="hero__actions">
+        <a href="infos.html" class="btn btn--primary">
+          <i class="fa-solid fa-recycle"></i>
+          Informações de Descarte
+        </a>
+        <a href="locais.html" class="btn btn--secondary">
+          <i class="fa-solid fa-location-dot"></i>
+          Encontrar locais
+        </a>
+      </div>
+
+      <div class="hero__numbers">
+        <div class="hero__number-card">
+          <i class="fa-solid fa-trash"></i>
+          <h3>53 Milhões</h3>
+          <p>Toneladas de lixo eletrônico produzidas por ano.</p>
+        </div>
+
+        <div class="hero__number-card">
+          <i class="fa-solid fa-recycle"></i>
+          <h3>17%</h3>
+          <p>Apenas uma pequena parte é reciclada corretamente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__image-area">
+      <div class="hero__circle hero__circle--1"></div>
+      <div class="hero__circle hero__circle--2"></div>
+      <div class="hero__circle hero__circle--3"></div>
+
+      <img src="imagens/LixoEletronico.png" alt="Imagem ilustrativa de equipamentos eletrônicos descartados"
+        class="hero__image" />
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="benefits" id="beneficios">
+    <div class="section-header">
+      <span class="section-tag">IMPORTÂNCIA</span>
+
+      <h2>Por que o descarte correto é essencial?</h2>
+
+      <p>
+        Pequenas atitudes fazem grande diferença para o meio ambiente e para a
+        qualidade de vida das próximas gerações.
+      </p>
+    </div>
+
+    <div class="benefits__grid">
+      <!-- CARD 1 -->
+      <article class="benefit-card">
+        <div class="benefit-card__top">
+          <i class="fa-solid fa-leaf"></i>
+          <span class="benefit-card__number">01</span>
+        </div>
+
+        <h3>Evite a poluição ambiental</h3>
+
+        <p>
+          Equipamentos eletrônicos possuem metais pesados e substâncias
+          tóxicas que podem contaminar o solo, rios e o ar quando descartados
+          incorretamente.
+        </p>
+
+        <div class="benefit-card__footer">
+          <span>
+            <i class="fa-solid fa-earth-americas"></i>
+            Proteção ambiental
+          </span>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="benefit-card">
+        <div class="benefit-card__top">
+          <i class="fa-solid fa-handshake"></i>
+
+          <span class="benefit-card__number">02</span>
+        </div>
+
+        <h3>Mais qualidade de vida</h3>
+
+        <p>
+          O descarte consciente reduz impactos ambientais e contribui para
+          cidades mais limpas, organizadas e sustentáveis para todos.
+        </p>
+
+        <div class="benefit-card__footer">
+          <span>
+            <i class="fa-solid fa-recycle"></i>
+            Futuro sustentável
+          </span>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="benefit-card">
+        <div class="benefit-card__top">
+          <i class="fa-solid fa-lightbulb"></i>
+
+          <span class="benefit-card__number">03</span>
+        </div>
+
+        <h3>Conscientização coletiva</h3>
+
+        <p>
+          Informar e conscientizar as pessoas é essencial para reduzir o lixo
+          eletrônico e incentivar hábitos mais responsáveis no dia a dia.
+        </p>
+
+        <div class="benefit-card__footer">
+          <span>
+            <i class="fa-solid fa-users"></i>
+            Impacto social
+          </span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="info" id="informacoes">
+    <div class="info__left">
+      <span class="section-tag">CONSCIENTIZAÇÃO</span>
+
+      <div class="info__content">
+        <h2>O crescimento do lixo eletrônico.</h2>
+
+        <p class="info__text">
+          Com o avanço acelerado da tecnologia, aparelhos como celulares,
+          notebooks e tablets são substituídos cada vez mais rápido.
+        </p>
+
+        <p class="info__text info__text--more">
+          Isso aumenta significativamente a quantidade de resíduos eletrônicos
+          descartados todos os anos, aumentando os impactos ambientais.
+          Muitas pessoas ainda não sabem onde descartar corretamente esses materiais.
+        </p>
+
+        <button class="read-more-btn">Ler mais</button>
+
+        <div class="info__mini-cards">
+          <div class="info__mini-card">
+            <i class="fa-solid fa-leaf"></i>
+            <span>Menos poluição</span>
+          </div>
+
+          <div class="info__mini-card">
+            <i class="fa-solid fa-recycle"></i>
+            <span>Mais reciclagem</span>
+          </div>
+
+          <div class="info__mini-card">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>Futuro sustentável</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info__right">
+      <img src="imagens/eletronicosdescartados.png" alt="Descarte de lixo eletrônico" class="info__image" />
+
+      <div class="info__overlay">
+        <h3>
+          Descarte consciente faz diferença.
+          <i class="fa-solid fa-recycle"></i>
+        </h3>
+
+        <p>
+          Pequenas atitudes ajudam a proteger o meio ambiente e reduzir os
+          impactos causados pelo lixo eletrônico.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h3>EcoTech</h3>
+
+    <p>Tecnologia e sustentabilidade caminhando juntas.</p>
+
+    <span> © 2026 • Projeto de conscientização ambiental </span>
+
+    <a href="#inicio" class="back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

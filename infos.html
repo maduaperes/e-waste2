@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoTech | Descarte Correto</title>
+  <link rel="stylesheet" href="css/infos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ========================================
+         NAVBAR
+    ========================================= -->
+  <header class="navbar">
+    <div class="navbar__brand">
+      <img src="imagens/EcotechLogo.png" alt="Logo EcoTech" />
+
+      <div>
+        <h2>EcoTech</h2>
+        <span>Descarte Sustentável</span>
+      </div>
+    </div>
+
+    <nav class="navbar__nav">
+      <a href="index.html" class="btn-nav">
+        <i class="fa-solid fa-house"></i>
+        Início
+      </a>
+    </nav>
+  </header>
+
+  <!-- ========================================
+         PAGE DESCARTE
+    ========================================= -->
+  <main id="page-descarte" class="page active">
+    <!-- HERO -->
+    <section class="hero-info">
+      <div class="hero-info__content">
+        <div class="hero-info__badge">
+          <span>ECOLOGIA • TECNOLOGIA • CONSCIENTIZAÇÃO</span>
+        </div>
+
+        <h1 class="hero-info__title">
+          Descarte
+          <span>correto</span>
+        </h1>
+
+        <p class="hero-info__subtitle">
+          O lixo eletrônico é um dos resíduos que mais cresce no mundo. Ele
+          contém metais pesados como chumbo, mercúrio e cádmio, que podem
+          contaminar o solo, a água e causar sérios danos à saúde humana
+          quando descartados de forma incorreta.
+        </p>
+
+        <p class="hero-info__subtitle">
+          A reciclagem e o descarte correto permitem a recuperação de
+          materiais valiosos, reduzem a poluição e ajudam a preservar os
+          recursos naturais do planeta. Pequenas ações individuais geram
+          grandes impactos coletivos.
+        </p>
+
+        <!-- INFORMAÇÕES EXTRAS (NOVO BLOCO) -->
+        <div class="hero-info__stats">
+          <div class="stat-card">
+            <h3>+50 mi <i class="fa-solid fa-trash"></i></h3>
+            <p>toneladas de lixo eletrônico geradas por ano no mundo</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>20% <i class="fa-solid fa-recycle"></i></h3>
+            <p>apenas é reciclado corretamente atualmente</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Alta toxicidade <i class="fa-solid fa-skull"></i></h3>
+
+            <p>componentes podem levar séculos para se decompor</p>
+          </div>
+        </div>
+
+        <div class="hero-info__actions">
+          <a href="#items" class="btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Ver itens aceitos
+          </a>
+
+          <a href="locais.html" class="btn-secondary">
+            <i class="fa-solid fa-location-dot"></i>
+            Pontos de coleta
+          </a>
+        </div>
+      </div>
+
+      <div class="info__right">
+        <img src="imagens/lixoEletronico2.png" alt="Descarte de lixo eletrônico" class="info__image" />
+      </div>
+
+      <div class="image-circle image-circle--1"></div>
+      <div class="image-circle image-circle--2"></div>
+    </section>
+
+    <!-- ========================================
+           ITENS ACEITOS
+      ========================================= -->
+    <section id="items" class="items-section">
+      <div class="section-header">
+        <span class="section-tag"> DESCARTE PERMITIDO </span>
+
+        <h2>Itens que podem ser descartados</h2>
+
+        <p>
+          Equipamentos eletrônicos aceitos nos pontos convencionais de coleta
+          sustentável.
+        </p>
+      </div>
+
+      <div class="items-grid">
+        <!-- CARD -->
+        <article class="item-card" onclick="showInfo('impressoras')">
+          <div class="item-card__top">
+            <div class="item-card__icon">
+              <i class="fa-solid fa-print"></i>
+            </div>
+
+            <span class="item-card__status"> Permitido </span>
+          </div>
+
+          <h3>Impressoras e Cartuchos</h3>
+
+          <p>Equipamentos de impressão e seus componentes.</p>
+
+          <button class="btn-card btn-card--green">
+            <i class="fa-solid fa-circle-info"></i>
+            Ver Informações
+          </button>
+        </article>
+
+        <!-- CARD -->
+        <article class="item-card" onclick="showInfo('celular')">
+          <div class="item-card__top">
+            <div class="item-card__icon item-card__icon--multi">
+              <i class="fa-solid fa-mobile"></i>
+
+              <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <span class="item-card__status"> Permitido </span>
+          </div>
+
+          <h3>Celulares e Telefones</h3>
+
+          <p>Aparelhos móveis e dispositivos de comunicação.</p>
+
+          <button class="btn-card btn-card--green">
+            <i class="fa-solid fa-circle-info"></i>
+            Ver Informações
+          </button>
+        </article>
+
+        <!-- CARD -->
+        <article class="item-card" onclick="showInfo('monitor')">
+          <div class="item-card__top">
+            <div class="item-card__icon item-card__icon--multi">
+              <i class="fa-solid fa-desktop"></i>
+
+              <i class="fa-solid fa-server"></i>
+            </div>
+
+            <span class="item-card__status"> Permitido </span>
+          </div>
+
+          <h3>Monitores e CPUs</h3>
+
+          <p>Equipamentos computacionais e peças eletrônicas.</p>
+
+          <button class="btn-card btn-card--green">
+            <i class="fa-solid fa-circle-info"></i>
+            Ver Informações
+          </button>
+        </article>
+
+        <!-- CARD -->
+        <article class="item-card" onclick="showInfo('carregador')">
+          <div class="item-card__top">
+            <div class="item-card__icon item-card__icon--multi">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <span class="item-card__status"> Permitido </span>
+          </div>
+
+          <h3>Cabos e Carregadores</h3>
+
+          <p>Fontes, conectores e acessórios eletrônicos diversos.</p>
+
+          <button class="btn-card btn-card--green">
+            <i class="fa-solid fa-circle-info"></i>
+            Ver Informações
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================
+           ITENS NÃO ACEITOS
+      ========================================= -->
+    <section class="items-section">
+      <div class="section-header">
+        <span class="section-tag section-tag--red"> DESCARTE ESPECIAL </span>
+
+        <h2>Itens que exigem descarte especializado</h2>
+
+        <p>
+          Esses materiais contêm substâncias extremamente tóxicas e precisam
+          de tratamento adequado.
+        </p>
+      </div>
+
+      <div class="items-grid items-grid--small">
+        <!-- CARD -->
+        <article class="item-card item-card--danger" onclick="showInfo('pilhas')">
+          <div class="item-card__top">
+            <div class="item-card__icon">
+              <i class="fa-solid fa-battery-full"></i>
+            </div>
+
+            <span class="item-card__status item-card__status--red">
+              Restrito
+            </span>
+          </div>
+
+          <h3>Pilhas e Baterias</h3>
+
+          <p>Materiais altamente tóxicos ao meio ambiente.</p>
+
+          <button class="btn-card btn-card--red">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Ver Informações
+          </button>
+        </article>
+
+        <!-- CARD -->
+        <article class="item-card item-card--danger" onclick="showInfo('lampadas')">
+          <div class="item-card__top">
+            <div class="item-card__icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <span class="item-card__status item-card__status--red">
+              Restrito
+            </span>
+          </div>
+
+          <h3>Lâmpadas</h3>
+
+          <p>Contêm mercúrio e gases altamente poluentes.</p>
+
+          <button class="btn-card btn-card--red">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Ver Informações
+          </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================
+         PAGE INFO
+    ========================================= -->
+  <main id="page-info" class="page">
+    <section class="info-hero">
+      <div class="container">
+        <nav class="info-navigation">
+          <button class="btn-back" onclick="goBack()" aria-label="Voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Voltar</span>
+          </button>
+        </nav>
+
+        <div class="info-hero__grid">
+          <article class="info-box">
+            <header class="info-box__header">
+              <span class="info-box__tag">Resíduo Eletrônico</span>
+              <h1 id="info-title" class="info-box__title">Carregando...</h1>
+            </header>
+
+            <div class="info-box__body">
+              <div class="info-block">
+                <div class="info-block__icon"><i class="fa-solid fa-microchip"></i></div>
+                <div class="info-block__text">
+                  <span class="info-label">Componentes</span>
+                  <p id="info-components"></p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-block__icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="info-block__text">
+                  <span class="info-label">Impacto ambiental</span>
+                  <p id="info-impact"></p>
+                </div>
+              </div>
+
+              <div class="info-risk">
+                <div class="info-risk__icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div class="info-risk__content">
+                  <strong>Risco à Saúde e Natureza</strong>
+                  <p id="info-risk-text"></p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="info-image-card">
+            <img id="info-image" src="" alt="Imagem do resíduo" />
+            <div class="info-image-overlay">
+              <div class="overlay-content">
+                <h3>Sua ação protege o futuro</h3>
+                <p>O descarte correto economiza energia e evita mineração desnecessária.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="extra-content">
+          <h2 class="extra-content__title">Como preparar para o descarte?</h2>
+          <div class="steps-grid">
+            <div class="step-item">
+              <span class="step-number">01</span>
+              <h4>Remova Dados</h4>
+              <p>Sempre formate dispositivos e remova contas pessoais antes de entregar.</p>
+            </div>
+            <div class="step-item">
+              <span class="step-number">02</span>
+              <h4>Pilhas e Baterias</h4>
+              <p>Se possível, retire as baterias internas para descarte separado.</p>
+            </div>
+            <div class="step-item">
+              <span class="step-number">03</span>
+              <h4>Ponto de Coleta</h4>
+              <p>Leve até um de nossos parceiros oficiais listados no mapa.</p>
+            </div>
+          </div>
+
+          <div class="info-fact-banner">
+            <div class="fact-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="fact-text">
+              <h4>Você sabia?</h4>
+              <p>Cerca de <strong>7% do ouro mundial</strong> está em lixo eletrônico. Reciclar é minerar de forma
+                inteligente e sustentável!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================
+         FOOTER
+    ========================================= -->
+  <footer class="footer">
+    <h3>EcoTech</h3>
+
+    <p>Tecnologia e sustentabilidade caminhando juntas.</p>
+
+    <span> © 2026 • Projeto de conscientização ambiental </span>
+  </footer>
+
+  <!-- ========================================
+         SCRIPT
+    ========================================= -->
+  <script>
+    const infoData = {
+      impressoras: {
+        name: "Impressoras e Cartuchos",
+        image: "imagens/impressora.png",
+        components: "Plásticos, tintas e metais leves",
+        impact: "Podem liberar resíduos químicos no solo e na água.",
+        risk: "Contaminação química e poluição do solo.",
+      },
+
+      celular: {
+        name: "CELULARES E TELEFONES",
+        image: "imagens/celulares.png",
+        components: "Bateria de lítio, placas e metais pesados",
+        impact: "Explosões e liberação de metais tóxicos.",
+        risk: "Alta toxicidade ambiental.",
+      },
+
+      monitor: {
+        name: "MONITORES E COMPUTADORES",
+        image: "imagens/monitores.png",
+        components: "Chumbo, mercúrio e placas eletrônicas",
+        impact: "Contaminação do solo e lençóis freáticos.",
+        risk: "Danos neurológicos e ambientais.",
+      },
+
+      carregador: {
+        name: "CABOS E CARREGADORES",
+        image: "imagens/carregadores.png",
+        components: "Cobre, plástico e PVC",
+        impact: "Queima libera gases tóxicos.",
+        risk: "Poluição do ar.",
+      },
+
+      pilhas: {
+        name: "PILHAS E BATERIAS",
+        image: "imagens/pilhas.png",
+        components: "Ácido, chumbo e mercúrio",
+        impact: "Altamente contaminante para água e solo.",
+        risk: "Extrema toxicidade.",
+      },
+
+      lampadas: {
+        name: "LÂMPADAS",
+        image: "imagens/lampadas.png",
+        components: "Mercúrio e gases",
+        impact: "Pode contaminar o ambiente por décadas.",
+        risk: "Risco químico severo.",
+      },
+    };
+
+    function showInfo(item) {
+      const d = infoData[item];
+
+      // ativa tela de info com animação
+      const pageDescarte = document.getElementById("page-descarte");
+      const pageInfo = document.getElementById("page-info");
+
+      pageDescarte.classList.remove("active");
+
+      setTimeout(() => {
+        pageInfo.classList.add("active");
+
+        // animação suave de entrada
+        pageInfo.classList.add("animate-in");
+
+        document.getElementById("info-title").textContent = d.name;
+        document.getElementById("info-components").textContent = d.components;
+        document.getElementById("info-impact").textContent = d.impact;
+        document.getElementById("info-risk-text").textContent = d.risk;
+
+        const img = document.getElementById("info-image");
+        img.style.opacity = "0";
+        img.src = d.image;
+
+        img.onload = () => {
+          img.style.transition = "0.6s ease";
+          img.style.opacity = "1";
+          img.style.transform = "scale(1)";
+        };
+      }, 150);
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function goBack() {
+      const pageDescarte = document.getElementById("page-descarte");
+      const pageInfo = document.getElementById("page-info");
+
+      pageInfo.classList.remove("active");
+      pageInfo.classList.remove("animate-in");
+
+      setTimeout(() => {
+        pageDescarte.classList.add("active");
+      }, 200);
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+
+</html>

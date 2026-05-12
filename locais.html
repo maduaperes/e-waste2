@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>EcoTech | Locais de Descarte</title>
+
+  <link rel="stylesheet" href="css/locais.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar__brand">
+      <img src="imagens/EcotechLogo.png" alt="Logo EcoTech" />
+
+      <div>
+        <h2>EcoTech</h2>
+        <span>Descarte Sustentável</span>
+      </div>
+    </div>
+
+    <nav class="navbar__nav">
+      <a href="index.html" class="btn-nav">
+        <i class="fa-solid fa-house"></i>
+        Início
+      </a>
+    </nav>
+  </header>
+
+  <!-- HEADER CONTENT -->
+  <section class="top-section">
+    <div class="top-section__content">
+      <span class="section-tag">
+        <i class="fa-solid fa-location-dot"></i>
+        PONTOS DE COLETA
+      </span>
+
+      <h1>
+        Locais para descarte de
+        <span>lixo eletrônico</span>
+      </h1>
+
+      <p>
+        Encontre pontos de coleta em Sorocaba para descartar equipamentos
+        eletrônicos de forma segura e sustentável. Pequenas ações ajudam a
+        reduzir impactos ambientais e contribuem para um futuro melhor.
+      </p>
+
+      <div class="top-section__cards">
+        <div class="mini-card">
+          <i class="fa-solid fa-recycle"></i>
+
+          <div>
+            <strong>Descarte seguro</strong>
+            <span>Evite contaminação ambiental</span>
+          </div>
+        </div>
+
+        <div class="mini-card">
+          <i class="fa-solid fa-earth-americas"></i>
+
+          <div>
+            <strong>Mais sustentabilidade</strong>
+            <span>Ajude o planeta com pequenas atitudes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-section__image">
+      <div class="image-circle image-circle--1"></div>
+      <div class="image-circle image-circle--2"></div>
+
+      <img src="imagens/lixeiraDeEletronicos.png" alt="Lixeira para descarte eletrônico" />
+
+      <div class="floating-box">
+        <i class="fa-solid fa-leaf"></i>
+
+        <div>
+          <strong>Reciclar transforma.</strong>
+          <span>Cada descarte correto faz diferença.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAIS -->
+  <section class="locais">
+    <div class="locais__top">
+      <div>
+        <span class="section-tag">
+          <i class="fa-solid fa-map-location-dot"></i>
+          PONTOS DE COLETA
+        </span>
+
+        <h2>Locais disponíveis para descarte</h2>
+
+        <p>
+          Escolha um dos pontos de coleta abaixo e descarte seus equipamentos
+          de forma responsável.
+        </p>
+      </div>
+    </div>
+
+    <div class="locais__carousel">
+      <button class="carousel-btn carousel-btn--left" id="prevBtn">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="locais__grid" id="locaisGrid">
+
+        <article class="local-card">
+          <a href="https://www.google.com/maps/search/?api=1&query=UNIP+Sorocaba+Avenida+Independência+210"
+            target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="local-card__image">
+              <img src="imagens/UnipSorocaba.jpg" alt="UNIP Sorocaba" />
+              <span class="local-card__badge">
+                <i class="fa-solid fa-building-columns"></i>
+                Universidade
+              </span>
+            </div>
+
+            <div class="local-card__content">
+              <h3>UNIP - Sorocaba</h3>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Avenida Independência, 210 <br />
+                Éden | Sorocaba - SP
+              </p>
+
+              <div class="local-card__info">
+                <i class="fa-regular fa-clock"></i>
+                Seg–Sex: 07h às 22h30
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="local-card">
+          <a href="https://www.google.com/maps/search/?api=1&query=Metareciclagem+Sorocaba+Av+Armando+Sales+de+Oliveira+762"
+            target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="local-card__image">
+              <img src="imagens/lixeiraDeEletronicos.png" alt="Metareciclagem" />
+              <span class="local-card__badge badge--green">
+                <i class="fa-solid fa-landmark"></i>
+                Público
+              </span>
+            </div>
+
+            <div class="local-card__content">
+              <h3>Metareciclagem</h3>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Av. Armando Sales de Oliveira, 762 <br />
+                Vila Trujillo | Sorocaba - SP
+              </p>
+
+
+              <div class="local-card__info">
+                <i class="fa-regular fa-clock"></i>
+                Seg–Sex: 08h às 16h
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="local-card">
+          <a href="https://www.google.com/maps/search/?api=1&query=Coopereso+Sorocaba+Rua+Ourinhos+241" target="_blank"
+            style="text-decoration: none; color: inherit;">
+            <div class="local-card__image">
+              <img src="imagens/coopreso.jpeg" alt="Coopereso" />
+              <span class="local-card__badge badge--dark">
+                <i class="fa-solid fa-users"></i>
+                Cooperativa
+              </span>
+            </div>
+
+            <div class="local-card__content">
+              <h3>Coopereso</h3>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Rua Ourinhos, 241 <br />
+                Jardim Leocádia | Sorocaba - SP
+              </p>
+
+              <div class="local-card__info">
+                <i class="fa-regular fa-clock"></i>
+                Seg–Sex: 07h às 16h
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="local-card">
+          <a href="https://www.google.com/maps/search/?api=1&query=Ecoponto+Vila+Helena+Sorocaba+Rua+Roque+Sampaio+100"
+            target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="local-card__image">
+              <img src="imagens/EcoPontoLocais.png" alt="Ecoponto" />
+              <span class="local-card__badge badge--blue">
+                <i class="fa-solid fa-recycle"></i>
+                Ecoponto
+              </span>
+            </div>
+
+            <div class="local-card__content">
+              <h3>Ecoponto Vila Helena</h3>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Rua Roque Sampaio, 100 <br />
+                Vila Helena | Sorocaba - SP
+              </p>
+
+              <div class="local-card__info">
+                <i class="fa-regular fa-clock"></i>
+                Seg–Sáb: 07h às 17h
+              </div>
+            </div>
+          </a>
+        </article>
+
+      </div>
+      <button class="carousel-btn carousel-btn--right" id="nextBtn">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="info-section">
+    <div class="info-box">
+      <i class="fa-solid fa-circle-info"></i>
+
+      <div>
+        <h3>O que pode ser descartado?</h3>
+
+        <p>
+          Celulares, carregadores, computadores, teclados, cabos, monitores,
+          pilhas, baterias e outros equipamentos eletrônicos.
+        </p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+
+      <div>
+        <h3>Importante</h3>
+
+        <p>
+          Nunca descarte eletrônicos no lixo comum. Muitos componentes podem
+          contaminar o solo e a água.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h3>EcoTech</h3>
+
+    <p>Tecnologia e sustentabilidade caminhando juntas.</p>
+
+    <span>© 2026 • Projeto de conscientização ambiental</span>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const grid = document.getElementById("locaisGrid");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    let currentPosition = 0;
+
+    nextBtn.addEventListener("click", () => {
+      currentPosition += 388;
+
+      const maxScroll = grid.scrollWidth - grid.clientWidth;
+
+      if (currentPosition > maxScroll) {
+        currentPosition = maxScroll;
+      }
+
+      grid.style.transform = `translateX(-${currentPosition}px)`;
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentPosition -= 388;
+
+      if (currentPosition < 0) {
+        currentPosition = 0;
+      }
+
+      grid.style.transform = `translateX(-${currentPosition}px)`;
+    });
+  </script>
+</body>
+
+</html>
