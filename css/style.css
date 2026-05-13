@@ -869,53 +869,80 @@ i {
   .hero {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 40px;
+
+    gap: 5px;
+
+    padding: 50px 0 40px;
   }
 
   .hero__content {
     order: 2;
-    margin-top: -80px;
+
+    margin-top: -50px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero__image-area {
     order: 1;
+
+    position: relative;
+
     width: 100%;
-    margin-top: -70px;
+
     display: flex;
     justify-content: center;
-  }
-
-  .hero__numbers {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
+
+    margin-top: -30px;
   }
 
-  .hero__circle--1 {
-    display: flex;
-    height: 30px;
-    width: 150px;
-    top: 300px;
-  }
+  .hero__image {
+    width: 420px;
+    max-width: 100%;
 
-  .hero__circle--2,
-  .hero__circle--3 {
-    display: none;
+    position: relative;
+    z-index: 3;
   }
 
   .hero__title {
     font-size: 3.2rem;
   }
 
-  .hero__image {
-    max-width: 380px;
+  .hero__subtitle {
+    max-width: 700px;
   }
 
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__numbers {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 16px;
+  }
+
+  .hero__number-card {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  /* INFO */
   .info {
     grid-template-columns: 1fr;
+
+    gap: 40px;
   }
 
   .info__left {
@@ -924,6 +951,68 @@ i {
 
   .info__right {
     order: 2;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+  /* BENEFITS */
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefit-card {
+    max-width: 400px;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+  }
+
+  .benefits {
+    padding: 80px 7%;
+  }
+
+  .benefit-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+  .info__left .section-tag {
+    margin: 0 auto 22px;
+
+    text-align: center;
+
+    display: table;
+  }
+
+  .benefits::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    width: 86%;
+    height: 3px;
+
+    background: repeating-linear-gradient(
+      90deg,
+      #0000001a 0px,
+      #0000001a 10px,
+      transparent 10px,
+      transparent 18px
+    );
   }
 }
 
@@ -933,21 +1022,26 @@ i {
 
 @media (min-width: 481px) and (max-width: 768px) {
   .navbar {
-    flex-direction: row;
     justify-content: space-between;
   }
 
   .navbar__toggle {
     display: block;
+
     font-size: 1.8rem;
+
     color: white;
+
     background: none;
+
     border: none;
+
     cursor: pointer;
   }
 
   .navbar__menu {
     position: absolute;
+
     top: 80px;
     left: 0;
     right: 0;
@@ -961,72 +1055,90 @@ i {
 
     padding: 20px 0;
 
-    z-index: 999;
-
-    /* 👇 ANIMAÇÃO INICIAL (FECHADO) */
     opacity: 0;
+
     transform: translateY(-20px);
+
     pointer-events: none;
 
     transition: 0.35s ease;
   }
 
-  /* 👇 ABERTO COM ANIMAÇÃO */
   .navbar__menu.active {
     opacity: 1;
+
     transform: translateY(0);
+
     pointer-events: auto;
   }
 
-  .navbar__menu a {
-    font-size: 0.85rem;
-  }
-
-  .btn-nav {
-    height: 44px;
-    padding: 0 18px;
-  }
-
   .hero {
-    padding: 120px 5% 40px;
-  }
-
-  .hero__image-area {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero__image {
-    position: relative;
-    z-index: 3;
+    padding: 120px 5% 50px;
   }
 
   .hero__title {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 
   .hero__subtitle {
     font-size: 1rem;
   }
 
+  /* BOTÕES */
+  .hero__actions {
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+  }
+
+  /* NUMBER CARDS */
+  .hero__numbers {
+    width: 100%;
+
+    align-items: center;
+  }
+
+  .hero__number-card {
+    width: 100%;
+
+    max-width: 500px;
+  }
+
+  /* CIRCLE */
+  .hero__image-area {
+    position: relative;
+  }
+
+  .hero__image {
+    position: relative;
+
+    z-index: 3;
+
+    width: 320px;
+  }
+
   .hero__circle--1 {
     position: absolute;
 
-    display: block;
+    width: 240px;
+    height: 55px;
 
-    width: 220px;
-    height: 50px;
-
-    top: 430px;
     left: 50%;
+    bottom: 48px;
 
     transform: translateX(-50%);
 
-    border-radius: 50%;
+    border-radius: 100%;
 
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.06);
+
+    filter: blur(2px);
 
     z-index: 1;
+
+    display: block;
   }
 
   .hero__circle--2,
@@ -1034,25 +1146,29 @@ i {
     display: none;
   }
 
+  /* BENEFITS */
   .benefits {
     padding: 80px 5%;
   }
 
-  .section-header h2 {
-    font-size: 2.4rem;
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
   }
 
-  .section-header p {
-    font-size: 1rem;
-  }
+  .benefit-card:last-child {
+    grid-column: 1 / -1;
 
-  .info__mini-cards {
-    justify-content: center;
+    max-width: 420px;
+
+    width: 100%;
+
+    margin: 0 auto;
   }
 
   .benefit-card {
-    padding: 22px;
-    border-radius: 24px;
+    padding: 24px;
   }
 
   .benefit-card h3 {
@@ -1060,111 +1176,93 @@ i {
   }
 
   .benefit-card p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
   }
 
-  .benefit-card__top i {
-    width: 55px;
-    height: 55px;
-    font-size: 1.2rem;
+  /* TITLES */
+  .section-header h2 {
+    font-size: 2.5rem;
   }
 
-  .benefit-card__number {
-    font-size: 2.2rem;
+  .section-header p {
+    font-size: 1rem;
   }
 
-  .info__mini-card {
-    padding: 8px 12px;
-    font-size: 0.8rem;
+  /* SECTION TAG */
+  .section-tag,
+  .info__left .section-tag {
+    margin: 0 auto 22px;
+
+    text-align: center;
+
+    display: table;
   }
 
-  .info__mini-card i {
-    font-size: 0.85rem;
+  /* INFO */
+  .info {
+    gap: 35px;
   }
 
-  /* BOTÕES CENTRALIZADOS */
-  .hero__actions {
+  .info__content {
+    padding: 35px;
+  }
+
+  .info__mini-cards {
     justify-content: center;
   }
 
-  /* NUMBER CARDS 100% */
-  .hero__number-card {
-    width: 100%;
-    max-width: 500px;
-  }
-
-.hero::after {
-  content: "";
-
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-
-  width: 86%;
-  height: 3px;
-
-  background: repeating-linear-gradient(
-    90deg,
-    #0000001a 0px,
-    #0000001a 10px,
-    transparent 10px,
-    transparent 18px
-  );
-}
-
-  /* BENEFITS:
-   2 EM CIMA + 1 CENTRALIZADO */
-  .benefits__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  /* terceiro card centralizado */
-  .benefit-card:last-child {
-    grid-column: 1 / -1;
-    max-width: 420px;
-    margin: 0 auto;
-  }
-
-  /* SECTION TAGS CENTRALIZADAS */
-  .info__left .section-tag {
-    margin: 0 auto 22px;
-    text-align: center;
-  }
+  /* IMAGE AREA */
   .info__right {
-    border-radius: 50%;
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 420px;
+
+    margin: 0 auto;
+
+    border-radius: 36px;
 
     overflow: hidden;
 
     position: relative;
-
-    margin: 0 auto;
-
-    width: 600px;
-    height: 450px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  .info__overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .info__image {
     width: 100%;
     height: 100%;
+
+    object-fit: cover;
+  }
+
+  /* OVERLAY */
+  .info__overlay {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
     text-align: center;
-    background: #012e406c;
-    gap: 10px;
+
+    gap: 12px;
+
+    padding: 30px;
+
+    background: linear-gradient(
+      to top,
+      rgba(1, 46, 64, 0.92),
+      rgba(1, 46, 64, 0.45),
+      transparent
+    );
   }
 
   .info__overlay i {
-    font-size: 2rem;
+    order: 1;
+
+    font-size: 1.8rem;
 
     color: var(--teal);
 
@@ -1175,19 +1273,27 @@ i {
     border-radius: 50%;
 
     margin: 0;
-
-    order: 1;
   }
 
   .info__overlay h3 {
+    order: 2;
+
     margin: 0;
 
-    order: 2;
+    font-size: 1.5rem;
   }
 
   .info__overlay p {
-    margin: 0;
     order: 3;
+
+    margin: 0;
+
+    font-size: 0.95rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 24px;
   }
 }
 
@@ -1195,6 +1301,80 @@ i {
    CELULAR PEQUENO (até 480px)
 ======================================== */
 @media (max-width: 480px) {
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .navbar__brand {
+    gap: 10px;
+  }
+
+  .navbar__brand img {
+    width: 46px;
+  }
+
+  .navbar__brand h2 {
+    font-size: 1.1rem;
+  }
+
+  .navbar__brand span {
+    font-size: 0.72rem;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__menu {
+    position: absolute;
+
+    top: 80px;
+    left: 0;
+    right: 0;
+
+    background: rgba(1, 46, 64, 0.98);
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    opacity: 0;
+
+    transform: translateY(-20px);
+
+    pointer-events: none;
+
+    transition: 0.35s ease;
+  }
+
+  .navbar__menu.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  .navbar__menu a {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 12px;
+
+    font-size: 0.95rem;
+  }
+
+  .btn-nav {
+    width: 100%;
+
+    justify-content: center;
+  }
   .hero__title {
     font-size: 2.2rem;
   }
@@ -1205,7 +1385,10 @@ i {
 
   .hero__actions {
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
   }
 
   .hero__image {
@@ -1213,11 +1396,69 @@ i {
   }
 
   .hero__number-card {
-    width: 100%;
+    width: 90%;
+  }
+
+  .hero__image-area {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__circle--1 {
+    position: absolute;
+
+    width: 180px;
+    height: 40px;
+
+    left: 50%;
+    bottom: 45px;
+
+    transform: translateX(-50%);
+
+    border-radius: 100%;
+
+    background: rgba(0, 0, 0, 0.06);
+
+    filter: blur(2px);
+
+    z-index: 1;
+
+    display: block;
+  }
+
+  .hero__circle--2,
+  .hero__circle--3 {
+    display: none;
   }
 
   .benefit-card {
     padding: 28px;
+  }
+
+  .benefits__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  /* REMOVE O LAYOUT DO TABLET */
+  .benefit-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* CARDS */
+  .benefit-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .benefits {
+    padding: 60px 5%;
   }
 
   .info__content {
