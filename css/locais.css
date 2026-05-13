@@ -156,22 +156,29 @@ a {
   margin-top: 150px;
 }
 
+.top-section__content {
+  position: relative;
+}
+
 .top-section__content::after {
   content: "";
 
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
 
-  width: 86%;
+  left: 7%;
+  right: 7%;
+
+  bottom: 0;
+
   height: 3px;
 
-  background: repeating-linear-gradient(90deg,
-      #0000001a 0px,
-      #0000001a 10px,
-      transparent 10px,
-      transparent 18px);
+  background: repeating-linear-gradient(
+    90deg,
+    #0000001a 0px,
+    #0000001a 10px,
+    transparent 10px,
+    transparent 18px
+  );
 }
 
 .top-section__content h1 {
@@ -992,6 +999,11 @@ a {
 
     line-height: 1.7;
   }
+
+    .top-section__content::after {
+    bottom: -55px;
+  }
+}
 
   .mini-card {
     padding: 16px;
