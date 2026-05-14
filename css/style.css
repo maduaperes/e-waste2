@@ -671,7 +671,7 @@ i {
 ======================================== */
 
 .info {
-  padding: 120px 7% 100px;
+  padding: 60px 7% 100px;
   position: relative;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -824,7 +824,7 @@ i {
   border-radius: 0px 40px 40px 0px;
 
   padding: 0;
-  /* 🔥 importante */
+
   margin: 0;
 
   z-index: 3;
@@ -881,6 +881,7 @@ i {
   word-break: break-word;
   overflow-wrap: break-word;
   line-height: 1.8;
+  margin: 10px;
 }
 
 .info__overlay i {
