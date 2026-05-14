@@ -176,13 +176,11 @@ i {
   width: 86%;
   height: 3px;
 
-  background: repeating-linear-gradient(
-    90deg,
-    #0000001a 0px,
-    #0000001a 10px,
-    transparent 10px,
-    transparent 18px
-  );
+  background: repeating-linear-gradient(90deg,
+      #0000001a 0px,
+      #0000001a 10px,
+      transparent 10px,
+      transparent 18px);
 }
 
 .hero__background {
@@ -513,7 +511,7 @@ i {
 
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
-  gap: 16px;
+  gap: 30px;
 }
 
 /* CARD */
@@ -527,7 +525,6 @@ i {
   padding: 17px;
 
   width: 100%;
-  max-width: 400px;
   height: auto;
 
   overflow: hidden;
@@ -672,15 +669,12 @@ i {
 ======================================== */
 
 .info {
-  padding: 60px 7% 120px;
-
+  padding: 120px 7% 100px;
   position: relative;
-
   display: grid;
-
-  gap: 50px;
-
-  align-items: stretch;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 0px;
 }
 
 .info::before {
@@ -699,12 +693,16 @@ i {
 
 /* LEFT */
 .info__left {
-  max-width: 800px;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 2;
-  left: 10%;
+  max-width: none;
+}
+
+.info__left,
+.info__right {
+  width: 100%;
 }
 
 .info .section-tag {
@@ -721,9 +719,9 @@ i {
 
   padding: 50px;
 
-  border-radius: 36px;
+  border-radius: 40px 0 0 40px;
 
-  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 18px 0 20px rgba(0, 0, 0, 0.212);
 }
 
 .info__content h2 {
@@ -800,36 +798,19 @@ i {
 
 /* RIGHT */
 .info__right {
-  position: absolute;
-  right: 15%;
-  top: 17%;
-
-  overflow: visible;
-
-  transform: translateY(-50%) translateX(120px);
-  width: 30%;
-  z-index: 1;
-
-  height: 635px;
-}
-
-.info__image {
   position: relative;
-
   width: 100%;
-  height: 75%;
-
-  border-radius: 40px;
-
-  object-fit: cover;
-
-  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.13);
-
-  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* OVERLAY */
 .info__overlay {
+  position: absolute;
+  inset: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -837,14 +818,14 @@ i {
 
   text-align: center;
 
-  position: absolute;
-  inset: 0;
+  background: var(--teal);
+  border-radius: 0px 40px 40px 0px;
+
+  padding: 0;
+  /* 🔥 importante */
+  margin: 0;
 
   z-index: 3;
-  border-radius: 40px;
-
-  padding-left: 90px;
-  padding-right: 36px;
 }
 
 .info__overlay h3 {
@@ -852,7 +833,6 @@ i {
   color: var(--white);
   order: 2;
   text-align: center;
-  margin-left: 80px;
   margin-bottom: 14px;
 }
 
@@ -862,9 +842,7 @@ i {
   text-align: center;
   word-break: break-word;
   overflow-wrap: break-word;
-  margin-left: 80px;
   line-height: 1.8;
-  margin-bottom: 15vh;
 }
 
 .info__overlay i {
@@ -880,12 +858,11 @@ i {
   height: 70px;
 
   border-radius: 50%;
-
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 25px;
 }
 
 /* ========================================
@@ -973,11 +950,18 @@ i {
   transform: translateY(0);
 }
 
+.hero,
+.benefits,
+.info {
+  overflow: hidden;
+}
+
 /* ========================================
    RESPONSIVE
 ======================================== */
 
 @media (max-width: 1024px) {
+
   /* ================= GLOBAL AJUSTE ================= */
   .section-header h2 {
     font-size: 3rem;
@@ -1116,6 +1100,7 @@ i {
 }
 
 @media (max-width: 768px) {
+
   /* NAVBAR */
   .navbar {
     padding: 16px 5%;
@@ -1282,12 +1267,10 @@ i {
   }
 
   /* BENEFITS */
-  /* ================================
-   BENEFITS (UNIFICADO 480 STYLE)
-================================ */
   .benefits {
     padding: 50px 5% 50px;
   }
+
   .benefits__grid {
     grid-template-columns: 1fr !important;
     gap: 10px !important;
@@ -1457,30 +1440,24 @@ i {
   }
 
   .info__overlay i {
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: var(--teal);
-    margin-top: 10px !important;
+    margin: 0 auto;
+    margin-top: 10% !important;
     order: 1;
-    background: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.575);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     align-self: center;
   }
 
   .info__overlay h3 {
-    margin-bottom: 10px;
-    margin: 0 auto;
-    margin-top: 10px !important;
-    text-align: center;
-    font-size: 1.2rem;
-    order: 2;
+    display: none;
   }
 
   .info__overlay p {
-    font-size: 0.85rem;
-    margin-top: 10px !important;
-    order: 3;
+    display: none;
   }
 
   /* FOOTER */
@@ -1593,6 +1570,7 @@ i {
 
     justify-content: center;
   }
+
   .hero__title {
     font-size: 2.2rem;
   }
@@ -1636,23 +1614,23 @@ i {
 
   .hero__icon--1 {
     top: 100px;
-    left: 20px;
+    left: 10px;
   }
 
   .hero__icon--2 {
-    top: 15vh;
-    right: 40px;
+    top: 20vh;
+    right: -3px;
   }
 
   .hero__icon--3 {
     bottom: 60px;
-    left: 50px;
+    left: 30px;
   }
 
   .hero__image-area::before {
     margin: 0 auto;
-    width: 30vh;
-    height: 30vh;
+    width: 40vh;
+    height: 40vh;
   }
 
   .benefits__grid {
@@ -1731,8 +1709,10 @@ i {
     width: 18px;
     height: 18px;
 
-    margin: 0; /* importante */
+    margin: 0;
+    /* importante */
   }
+
   .benefits {
     padding: 35px 5%;
   }
@@ -1812,31 +1792,23 @@ i {
   }
 
   .info__overlay i {
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: var(--teal);
-    margin-bottom: 12px;
-    margin-top: 50px;
+    margin: 0 auto;
     order: 1;
-    background: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.575);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     align-self: center;
   }
 
   .info__overlay h3 {
-    margin-bottom: 10px;
-    text-align: center !important;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    order: 2;
+    display: none;
   }
 
   .info__overlay p {
-    font-size: 0.85rem;
-    margin: 0 auto;
-    text-align: center !important;
-    order: 3;
+    display: none;
   }
 
   .footer {
