@@ -828,6 +828,8 @@ i {
   margin: 0;
 
   z-index: 3;
+
+  border: 15px solid var(--white);
 }
 
 .info__overlay h3 {
@@ -1792,8 +1794,6 @@ i {
     padding: 17px;
     border-radius: 40px;
     opacity: 0.5;
-    border: 15px solid var(--white);
-
   }
 
   .info__overlay i {
