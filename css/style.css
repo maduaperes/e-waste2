@@ -820,7 +820,7 @@ i {
 
   text-align: center;
 
-  background: var(--teal);
+  background: linear-gradient(135deg, #126969, #1fb8b8);
   border-radius: 0px 40px 40px 0px;
 
   padding: 0;
@@ -828,8 +828,42 @@ i {
   margin: 0;
 
   z-index: 3;
-
+  overflow: hidden; 
   border: 15px solid var(--white);
+}
+
+.info__overlay::before {
+  content: "";
+
+  position: absolute;
+  top: -50%;
+  left: -120%;
+
+  width: 40%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.08) 70%,
+    transparent 100%
+  );
+
+  transform: rotate(25deg);
+
+  animation: shineCard 2s linear infinite;
+}
+
+@keyframes shineCard {
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 160%;
+  }
 }
 
 .info__overlay h3 {
@@ -1392,6 +1426,7 @@ i {
 
   .info__content {
     padding: 22px;
+    border-radius: 40px;
   }
 
   .info__mini-card {
