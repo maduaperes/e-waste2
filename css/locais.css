@@ -138,7 +138,7 @@ a {
   align-items: center;
   gap: 10px;
 
-  padding: 10px 18px;
+  padding: 7px 18px;
 
   border-radius: 999px;
 
@@ -146,7 +146,7 @@ a {
 
   color: var(--teal);
 
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 700;
 
   letter-spacing: 1px;
@@ -160,7 +160,7 @@ a {
   position: relative;
 }
 
-.top-section__content::after {
+.top-section::after {
   content: "";
 
   position: absolute;
@@ -168,7 +168,7 @@ a {
   left: 7%;
   right: 7%;
 
-  bottom: 0;
+  bottom: -30px;
 
   height: 3px;
 
@@ -182,7 +182,7 @@ a {
 }
 
 .top-section__content h1 {
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
 
   line-height: 1.05;
 
@@ -371,14 +371,14 @@ a {
 }
 
 .locais__top h2 {
-  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 6vw, 3rem);
 
   margin-bottom: 18px;
 }
 
 .locais__top p {
   color: var(--muted);
-
+  font-size: 1.05rem;
   line-height: 1.9;
 }
 
@@ -556,17 +556,19 @@ a {
 }
 
 .local-card__content {
-  padding: 30px;
+  padding: 20px;
 }
 
 .local-card__content h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
   margin-bottom: 14px;
 }
 
 .local-card__content p {
   color: var(--muted);
+
+  font-size: 0.85rem;
 
   line-height: 1.8;
 
@@ -580,7 +582,7 @@ a {
 .local-card__info {
   width: fit-content;
 
-  padding: 12px 18px;
+  padding: 8px 18px;
 
   border-radius: 999px;
 
@@ -588,7 +590,7 @@ a {
 
   color: var(--teal);
 
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 600;
 
   display: flex;
@@ -617,7 +619,7 @@ a {
 
   display: flex;
 
-  gap: 20px;
+  gap: 8px;
 
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.13);
 
@@ -629,8 +631,8 @@ a {
 }
 
 .info-box i {
-  width: 62px;
-  height: 62px;
+  width: 55px;
+  height: 55px;
 
   border-radius: 20px;
 
@@ -653,7 +655,7 @@ a {
 }
 
 .info-box h3 {
-  font-size: 1.3rem;
+  font-size: 1rem;
 
   margin-bottom: 10px;
 }
@@ -661,6 +663,7 @@ a {
 .info-box p {
   color: var(--muted);
 
+  font-size: 0.85rem;
   line-height: 1.8;
 }
 

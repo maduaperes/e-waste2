@@ -201,6 +201,8 @@ button {
   box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.13);
 
   transition: var(--transition);
+
+  z-index: 2;
 }
 
 .stat-card:hover {
