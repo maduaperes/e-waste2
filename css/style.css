@@ -176,11 +176,13 @@ i {
   width: 86%;
   height: 3px;
 
-  background: repeating-linear-gradient(90deg,
-      #0000001a 0px,
-      #0000001a 10px,
-      transparent 10px,
-      transparent 18px);
+  background: repeating-linear-gradient(
+    90deg,
+    #0000001a 0px,
+    #0000001a 10px,
+    transparent 10px,
+    transparent 18px
+  );
 }
 
 .hero__background {
@@ -862,7 +864,6 @@ i {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 /* ========================================
@@ -961,7 +962,6 @@ i {
 ======================================== */
 
 @media (max-width: 1024px) {
-
   /* ================= GLOBAL AJUSTE ================= */
   .section-header h2 {
     font-size: 3rem;
@@ -1100,7 +1100,6 @@ i {
 }
 
 @media (max-width: 768px) {
-
   /* NAVBAR */
   .navbar {
     padding: 16px 5%;
@@ -1714,11 +1713,11 @@ i {
   }
 
   .benefits {
-    padding: 35px 5%;
+    padding: 60px 5%;
   }
 
   .info {
-    padding: 50px 5% 20px;
+    padding: 10px 5% 200px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -1726,6 +1725,8 @@ i {
 
   .info__content {
     padding: 22px;
+    border-radius: 40px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.342);
   }
 
   .info__mini-card {
@@ -1789,16 +1790,20 @@ i {
     align-items: center;
     text-align: center;
     padding: 17px;
+    border-radius: 40px;
+    opacity: 0.5;
+    border: 15px solid var(--white);
+
   }
 
   .info__overlay i {
-    font-size: 2rem;
+    font-size: 7rem;
     color: var(--teal);
     margin: 0 auto;
     order: 1;
-    background: rgba(255, 255, 255, 0.575);
-    width: 80px;
-    height: 80px;
+    background: rgb(255, 255, 255);
+    width: 25vh;
+    height: 25vh;
     border-radius: 50%;
     align-self: center;
   }
