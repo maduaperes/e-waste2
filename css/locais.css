@@ -474,7 +474,7 @@ a {
   overflow: hidden;
 
    width: 100%;
-  padding: 40px 5%;
+  padding: 40px 20px;
 }
 
 .locais__grid {
@@ -677,7 +677,7 @@ a {
 ======================================== */
 .footer {
   padding: 40px 20px;
-
+  width: 100%;
   background: var(--navy);
 
   text-align: center;
