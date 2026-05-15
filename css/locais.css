@@ -1169,18 +1169,9 @@ a {
   }
 
   .carousel-btn {
-    margin: 0;
-}
-
-.carousel-btn--left,
-#prevBtn {
-    left: 30%;
-}
-
-.carousel-btn--right,
-#nextBtn {
-    right: 30%;
-}
+    width: 46px;
+    height: 46px;
+  }
 
   /* INFO */
   .info-section {
@@ -1232,9 +1223,4 @@ a {
   .footer span {
     font-size: 0.72rem;
   }
-}
-
-.locais__grid,
-.locais__carousel {
-    max-width: 100%;
 }
