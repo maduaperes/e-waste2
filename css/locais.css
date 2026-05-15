@@ -473,9 +473,8 @@ a {
 
   overflow: hidden;
 
-  width: 100%;
-
-  padding: 40px 100px;
+   width: 100%;
+  padding: 40px 5%;
 }
 
 .locais__grid {
