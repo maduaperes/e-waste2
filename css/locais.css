@@ -1057,7 +1057,7 @@ a {
   .floating-box {
     padding: 14px 18px;
 
-    width: 85%;
+    width: min(85%, 320px);
 
     margin-top: -50px;
   }
