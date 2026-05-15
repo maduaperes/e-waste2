@@ -46,10 +46,13 @@ a {
 
 i {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0px;
   color: var(--white);
 }
 
+.btn i{
+   margin-right:10px;
+}
 /* ========================================
    NAVBAR
 ======================================== */

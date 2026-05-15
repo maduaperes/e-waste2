@@ -121,8 +121,9 @@ a {
    TOP SECTION
 ======================================== */
 .top-section {
-  padding: 90px 7%;
-
+  padding: 100px 7% 60px;
+  ;
+  position: relative;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
 
@@ -133,6 +134,8 @@ a {
 
 .section-tag {
   width: fit-content;
+
+  margin: 10px;
 
   display: flex;
   align-items: center;
@@ -151,9 +154,11 @@ a {
 
   letter-spacing: 1px;
 
-  margin-bottom: 24px;
+  margin-top: 40px;
+}
 
-  margin-top: 150px;
+.section-tag--hero {
+  margin: 0 auto 24px;
 }
 
 .top-section__content {
@@ -165,20 +170,21 @@ a {
 
   position: absolute;
 
+  width: 86%;
+  left: 50%;
+
   left: 7%;
   right: 7%;
 
-  bottom: -30px;
+  bottom: 5px;
 
   height: 3px;
 
-  background: repeating-linear-gradient(
-    90deg,
-    #0000001a 0px,
-    #0000001a 10px,
-    transparent 10px,
-    transparent 18px
-  );
+  background: repeating-linear-gradient(90deg,
+      #0000001a 0px,
+      #0000001a 10px,
+      transparent 10px,
+      transparent 18px);
 }
 
 .top-section__content h1 {
@@ -356,7 +362,7 @@ a {
    LOCAIS
 ======================================== */
 .locais {
-  padding: 20px 7% 120px;
+  padding: 20px 7% 50px;
 }
 
 /* ========================================
@@ -367,7 +373,7 @@ a {
 
   max-width: 850px;
 
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
 }
 
 .locais__top h2 {
@@ -602,7 +608,7 @@ a {
    INFO SECTION
 ======================================== */
 .info-section {
-  padding: 0 7% 120px;
+  padding: 0 7% 80px;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -840,6 +846,7 @@ a {
     padding: 28px;
   }
 }
+
 /* =========================================
    TABLET PEQUENO
 ========================================= */
@@ -991,13 +998,11 @@ a {
 
     height: 3px;
 
-    background: repeating-linear-gradient(
-      90deg,
-      #0000001a 0px,
-      #0000001a 10px,
-      transparent 10px,
-      transparent 18px
-    );
+    background: repeating-linear-gradient(90deg,
+        #0000001a 0px,
+        #0000001a 10px,
+        transparent 10px,
+        transparent 18px);
   }
 }
 
@@ -1112,13 +1117,11 @@ a {
 
     height: 3px;
 
-    background: repeating-linear-gradient(
-      90deg,
-      #0000001a 0px,
-      #0000001a 10px,
-      transparent 10px,
-      transparent 18px
-    );
+    background: repeating-linear-gradient(90deg,
+        #0000001a 0px,
+        #0000001a 10px,
+        transparent 10px,
+        transparent 18px);
   }
 
   .locais__top {
